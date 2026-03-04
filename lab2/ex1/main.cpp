@@ -10,11 +10,9 @@ int main()
 	lista.Add(3);
 	lista.Add(211);
 	lista.Add(1);
-
 	printf("Lista initiala: ");
 	lista.Print();
 	lista.Sort();
-
 	printf("Lista sortata: ");
 	lista.Print();
 

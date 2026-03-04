@@ -5,22 +5,22 @@
 int main()
 {
     Student s1;
-    s1.SetNume("Popescu Ion");
+    s1.SetName("Gabaroi Rares");
     s1.SetMath(9.5f);
-    s1.SetEnglish(8.0f);
-    s1.SetHistory(7.5f);
+    s1.SetEng(8.0f);
+    s1.SetIst(7.5f);
 
     Student s2;
-    s2.SetNume("Ionescu Maria");
+    s2.SetName("Lupu Darius");
     s2.SetMath(10.0f);
-    s2.SetEnglish(9.0f);
-    s2.SetHistory(8.5f);
+    s2.SetEng(9.0f);
+    s2.SetIst(8.5f);
 
-    printf("--- Date Studenti ---\n");
-    printf("Student 1: %s (Medie: %.2f)\n", s1.GetNume(), s1.GetAverage());
-    printf("Student 2: %s (Medie: %.2f)\n\n", s2.GetNume(), s2.GetAverage());
+    printf(" Date Studenti \n");
+    printf("Student 1: %s (Medie: %.2f)\n", s1.GetName(), s1.Avg());
+    printf("Student 2: %s (Medie: %.2f)\n\n", s2.GetName(), s2.Avg());
 
-    printf("--- Rezultate Comparatii ---\n");
+    printf(" Rezultate Comparatii:\n");
    
     printf("Comparatie Nume: %d\n", CompareName(&s1, &s2));
 

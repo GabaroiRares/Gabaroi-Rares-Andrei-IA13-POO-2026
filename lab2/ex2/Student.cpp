@@ -1,54 +1,53 @@
+﻿#define _CRT_SECURE_NO_WARNINGS
 #include "Student.h"
+#include <iostream>
 #include <cstring>
 
-Student::Student()
-{
-    this->name = nullptr;
-    this->mathGrade = 1.0f;
-    this->englishGrade = 1.0f;
-    this->historyGrade = 1.0f;
-}
-Student::~Student()
-{
-    if (this->name != nullptr)
-        delete[] this->name;
-}
+		void Student::SetName(const char* x) {
+		strcpy(this->name, x);
+	}
+	char* Student::GetName() {
+		return this->name;
+	}
+	void Student::SetMath(float nume) {
+		if (nume >= 1 and nume <= 10) {
+			this->math = nume;
+		}
+		else {
+			this->math = 0;
+		}
 
-void Student::SetNume(const char* name)
-{
-    if (this->name != nullptr)
-        delete[] this->name;
-    int len = strlen(name) + 1;
-    this->name = new char[len];
-    strcpy_s(this->name, len, name);
-}
-const char* Student::GetNume()
-{
-    return name;
-}
+	}
 
-void Student::SetMath(float grade)
-{
-    if (grade >= 1.0f && grade <= 10.0f) this->mathGrade = grade;
-}
+	float Student::GetMath() {
+		return this->math;
+	}
 
-float Student::GetMath() 
-{ 
-    return this->mathGrade; 
-}
-void Student::SetEnglish(float grade)
-{
-    if (grade >= 1.0f && grade <= 10.0f) this->englishGrade = grade;
-}
-float Student::GetEnglish() { return this->englishGrade; }
+	void Student::SetEng(float x) {
+		if (x >= 1 and x <= 10) {
+			this->eng = x;
+		}
+		else {
+			this->eng = 0;
+		}
 
-void Student::SetHistory(float grade)
-{
-    if (grade >= 1.0f && grade <= 10.0f) this->historyGrade = grade;
-}
-float Student::GetHistory() { return this->historyGrade; }
+	}
+	float Student::GetEng() {
+		return this->eng;
+	}
 
-float Student::GetAverage()
-{
-    return (this->mathGrade + this->englishGrade + this->historyGrade) / 3.0f;
-}
+	void Student::SetIst(float x) {
+		if (x >= 1 and x <= 10) {
+			this->ist = x;
+		}
+		else {
+			this->ist = 0;
+		}
+	}
+	float Student::GetIst() {
+		return this->ist;
+	}
+	float Student::Avg() {
+		return (this->math + this->eng + this->ist) / 3;
+	}
+	

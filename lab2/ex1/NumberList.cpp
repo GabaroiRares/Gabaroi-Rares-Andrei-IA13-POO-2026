@@ -17,14 +17,14 @@ bool NumberList::Add(int x)
 
 void NumberList::Sort()
 {
-	int i,j,temp;
+	int i,j,aux;
 	for(i=0;i<this->count-1;i++)
 		for(j=i+1;j<this->count;j++)
 			if (this->numbers[i] > this->numbers[j])
 			{
-				temp = this->numbers[i];
+				aux = this->numbers[i];
 				this->numbers[i] = this->numbers[j];
-				this->numbers[j] = temp;
+				this->numbers[j] = aux;
 			}
 }
 
